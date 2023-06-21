@@ -9,7 +9,18 @@ header {
     outline: 1px solid black;
     margin: auto;
     font-family: 'Orbitron';
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.topText {
+    font-size: 32px;
+}
+
+.bottomText {
     font-size: 48px;
+    margin-top: auto;
 }
 
 .buttons {
