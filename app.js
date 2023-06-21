@@ -16,6 +16,8 @@ let subtract = document.getElementById('subtract');
 let multiply = document.getElementById('multiply');
 let divide = document.getElementById('divide');
 let displayBox = document.getElementById('displayBox');
+let topText = document.getElementById('topText');
+let bottomText = document.getElementById('bottomText');
 
 let firstNumArr = [];
 
@@ -24,55 +26,55 @@ let secondNumArr = [];
 one.addEventListener('click', () => {
     firstNumArr.push(one.value);
     console.log(one.value);
-    displayBox.textContent = firstNumArr.join("");
+    bottomText.textContent = firstNumArr.join("");
 });
 
 two.addEventListener('click', () => {
     firstNumArr.push(two.value);
     console.log(two.value);
-    displayBox.textContent = firstNumArr.join("");
+    bottomText.textContent = firstNumArr.join("");
 });
 
 three.addEventListener('click', () => {
     firstNumArr.push(three.value);
     console.log(three.value);
-    displayBox.textContent = firstNumArr.join("");
+    bottomText.textContent = firstNumArr.join("");
 });
 
 four.addEventListener('click', () => {
     firstNumArr.push(four.value);
     console.log(four.value);
-    displayBox.textContent = firstNumArr.join("");
+    bottomText.textContent = firstNumArr.join("");
 });
 
 five.addEventListener('click', () => {
     firstNumArr.push(five.value);
     console.log(five.value);
-    displayBox.textContent = firstNumArr.join("");
+    bottomText.textContent = firstNumArr.join("");
 });
 
 six.addEventListener('click', () => {
     firstNumArr.push(six.value);
     console.log(six.value);
-    displayBox.textContent = firstNumArr.join("");
+    bottomText.textContent = firstNumArr.join("");
 });
 
 seven.addEventListener('click', () => {
     firstNumArr.push(seven.value);
     console.log(seven.value);
-    displayBox.textContent = firstNumArr.join("");
+    bottomText.textContent = firstNumArr.join("");
 });
 
 eight.addEventListener('click', () => {
     firstNumArr.push(eight.value);
     console.log(eight.value);
-    displayBox.textContent = firstNumArr.join("");
+    bottomText.textContent = firstNumArr.join("");
 });
 
 nine.addEventListener('click', () => {
     firstNumArr.push(nine.value);
     console.log(nine.value);
-    displayBox.textContent = firstNumArr.join("");
+    bottomText.textContent = firstNumArr.join("");
 });
 
 zero.addEventListener('click', () => {
@@ -80,8 +82,17 @@ zero.addEventListener('click', () => {
     console.log(zero.value);
     if(firstNumArr[0] == 0) {
         firstNumArr.shift();
-        displayBox.textContent = 0;
+        bottomText.textContent = 0;
     } else {
-        displayBox.textContent = firstNumArr.join("");
+        bottomText.textContent = firstNumArr.join("");
+    }
+});
+
+add.addEventListener('click', () => {
+    if(firstNumArr != 0) {
+        topText.textContent = `${firstNumArr.join("")} +`;
+        bottomText.textContent = 0;
+    } else {
+        return;
     }
 });
