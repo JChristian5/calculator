@@ -24,9 +24,15 @@ let firstNumArr = [];
 let secondNumArr = [];
 
 one.addEventListener('click', () => {
-    firstNumArr.push(one.value);
-    console.log(one.value);
-    bottomText.textContent = firstNumArr.join("");
+    // if(topText != "") {
+    //     secondNumArr.push(one.value);
+    //     console.log(one.value);
+    //     bottomText.textContent = secondNumArr.join("");
+    // } else {
+        firstNumArr.push(one.value);
+        console.log(one.value);
+        bottomText.textContent = firstNumArr.join("");
+    // }
 });
 
 two.addEventListener('click', () => {
@@ -91,6 +97,33 @@ zero.addEventListener('click', () => {
 add.addEventListener('click', () => {
     if(firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} +`;
+        bottomText.textContent = 0;
+    } else {
+        return;
+    }
+});
+
+subtract.addEventListener('click', () => {
+    if(firstNumArr != 0) {
+        topText.textContent = `${firstNumArr.join("")} -`;
+        bottomText.textContent = 0;
+    } else {
+        return;
+    }
+});
+
+multiply.addEventListener('click', () => {
+    if(firstNumArr != 0) {
+        topText.textContent = `${firstNumArr.join("")} x`;
+        bottomText.textContent = 0;
+    } else {
+        return;
+    }
+});
+
+divide.addEventListener('click', () => {
+    if(firstNumArr != 0) {
+        topText.textContent = `${firstNumArr.join("")} ÷`;
         bottomText.textContent = 0;
     } else {
         return;
