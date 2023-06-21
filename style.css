@@ -8,6 +8,8 @@ header {
     width: 500px;
     outline: 1px solid black;
     margin: auto;
+    font-family: 'Orbitron';
+    font-size: 48px;
 }
 
 .buttons {
