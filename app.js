@@ -30,6 +30,8 @@ let secondNumArr = [];
 
 let operation = null;
 
+let answer = 0;
+
 one.addEventListener('click', () => {
     if (operation == null) {
         firstNumArr.push(one.value);
@@ -296,5 +298,29 @@ divide.addEventListener('click', () => {
         decimal.disabled = false;
     } else {
         return;
+    }
+});
+
+equal.addEventListener('click', () => {
+    if (operation == null || secondNumArr == []) {
+        return;
+    } else if (operation == 'add') {
+        topText.textContent = `${firstNumArr.join("")} + ${secondNumArr.join("")} =`;
+        answer = parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""));
+        bottomText.textContent = `${answer}`;
+    } else if (operation == 'subtract') {
+        topText.textContent = `${firstNumArr.join("")} - ${secondNumArr.join("")} =`;
+        answer = parseFloat(firstNumArr.join("")) - parseFloat(secondNumArr.join(""));
+        bottomText.textContent = `${answer}`;
+    } else if (operation == 'multiply') {
+        topText.textContent = `${firstNumArr.join("")} x ${secondNumArr.join("")} =`;
+        answer = parseFloat(firstNumArr.join("")) * parseFloat(secondNumArr.join(""));
+        bottomText.textContent = `${answer}`;
+    } else if (operation == 'divide' && secondNumArr == 0) {
+        bottomText.textContent = `Error, can not divide by 0!`;
+    } else if (operation == 'divide') {
+        topText.textContent = `${firstNumArr.join("")} ÷ ${secondNumArr.join("")} =`;
+        answer = parseFloat(firstNumArr.join("")) / parseFloat(secondNumArr.join(""));
+        bottomText.textContent = `${answer}`;
     }
 });
