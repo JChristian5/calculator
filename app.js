@@ -1,3 +1,7 @@
+// TOMORROW
+// CHANGE For zero, if first num is zero, second number cannot be zero
+// if/else for first/second array add?
+
 let ac = document.getElementById('ac');
 let c = document.getElementById('c');
 let one = document.getElementById('one');
@@ -18,6 +22,7 @@ let divide = document.getElementById('divide');
 let displayBox = document.getElementById('displayBox');
 let topText = document.getElementById('topText');
 let bottomText = document.getElementById('bottomText');
+let decimal = document.getElementById('decimal');
 
 let firstNumArr = [];
 
@@ -92,6 +97,12 @@ zero.addEventListener('click', () => {
     } else {
         bottomText.textContent = firstNumArr.join("");
     }
+});
+
+decimal.addEventListener('click', () => {
+    firstNumArr.push('.');
+    bottomText.textContent = firstNumArr.join("");
+    decimal.disabled = true;
 });
 
 add.addEventListener('click', () => {
