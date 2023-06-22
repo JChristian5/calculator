@@ -28,130 +28,239 @@ let firstNumArr = [];
 
 let secondNumArr = [];
 
+let operation = null;
+
 one.addEventListener('click', () => {
-    // if(topText != "") {
-    //     secondNumArr.push(one.value);
-    //     console.log(one.value);
-    //     bottomText.textContent = secondNumArr.join("");
-    // } else {
-    firstNumArr.push(one.value);
-    console.log(one.value);
-    bottomText.textContent = firstNumArr.join("");
-    // }
-    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-        firstNumArr.shift();
+    if (operation == null) {
+        firstNumArr.push(one.value);
+        console.log(one.value);
         bottomText.textContent = firstNumArr.join("");
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(one.value);
+        console.log(one.value);
+        bottomText.textContent = secondNumArr.join("");
+        if(secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+            secondNumArr.shift();
+            bottomText.textContent = secondNumArr.join("");
+        }
     }
 });
 
 two.addEventListener('click', () => {
-    firstNumArr.push(two.value);
-    console.log(two.value);
-    bottomText.textContent = firstNumArr.join("");
-    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-        firstNumArr.shift();
+    if (operation == null) {
+        firstNumArr.push(two.value);
+        console.log(two.value);
         bottomText.textContent = firstNumArr.join("");
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(two.value);
+        console.log(two.value);
+        bottomText.textContent = secondNumArr.join("");
+        if (secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+            secondNumArr.shift();
+            bottomText.textContent = secondNumArr.join("");
+        }
     }
 });
 
 three.addEventListener('click', () => {
-    firstNumArr.push(three.value);
-    console.log(three.value);
-    bottomText.textContent = firstNumArr.join("");
-    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-        firstNumArr.shift();
+    if (operation == null) {
+        firstNumArr.push(three.value);
+        console.log(three.value);
         bottomText.textContent = firstNumArr.join("");
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(three.value);
+        console.log(three.value);
+        bottomText.textContent = secondNumArr.join("");
+        if (secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+            secondNumArr.shift();
+            bottomText.textContent = secondNumArr.join("");
+        }
     }
 });
 
 four.addEventListener('click', () => {
-    firstNumArr.push(four.value);
-    console.log(four.value);
-    bottomText.textContent = firstNumArr.join("");
-    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-        firstNumArr.shift();
+    if (operation == null) {
+        firstNumArr.push(four.value);
+        console.log(four.value);
         bottomText.textContent = firstNumArr.join("");
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(four.value);
+        console.log(four.value);
+        bottomText.textContent = secondNumArr.join("");
+        if (secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+            secondNumArr.shift();
+            bottomText.textContent = secondNumArr.join("");
+        }
     }
 });
 
 five.addEventListener('click', () => {
-    firstNumArr.push(five.value);
-    console.log(five.value);
-    bottomText.textContent = firstNumArr.join("");
-    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-        firstNumArr.shift();
+    if (operation == null) {
+        firstNumArr.push(five.value);
+        console.log(five.value);
         bottomText.textContent = firstNumArr.join("");
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(five.value);
+        console.log(five.value);
+        bottomText.textContent = secondNumArr.join("");
+        if (secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+            secondNumArr.shift();
+            bottomText.textContent = secondNumArr.join("");
+        } 
     }
 });
 
 six.addEventListener('click', () => {
-    firstNumArr.push(six.value);
-    console.log(six.value);
-    bottomText.textContent = firstNumArr.join("");
-    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-        firstNumArr.shift();
+    if (operation == null) {
+        firstNumArr.push(six.value);
+        console.log(six.value);
         bottomText.textContent = firstNumArr.join("");
-    }
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(six.value);
+        console.log(six.value);
+        bottomText.textContent = secondNumArr.join("");
+        if (secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+            secondNumArr.shift();
+            bottomText.textContent = secondNumArr.join("");
+        } 
+    }  
 });
 
 seven.addEventListener('click', () => {
-    firstNumArr.push(seven.value);
-    console.log(seven.value);
-    bottomText.textContent = firstNumArr.join("");
-    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-        firstNumArr.shift();
+    if (operation == null) {
+        firstNumArr.push(seven.value);
+        console.log(seven.value);
         bottomText.textContent = firstNumArr.join("");
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(seven.value);
+        console.log(seven.value);
+        bottomText.textContent = secondNumArr.join("");
+        if (secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+            secondNumArr.shift();
+            bottomText.textContent = secondNumArr.join("");
+        } 
     }
 });
 
 eight.addEventListener('click', () => {
-    firstNumArr.push(eight.value);
-    console.log(eight.value);
-    bottomText.textContent = firstNumArr.join("");
-    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-        firstNumArr.shift();
+    if (operation == null) {
+        firstNumArr.push(eight.value);
+        console.log(eight.value);
         bottomText.textContent = firstNumArr.join("");
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(eight.value);
+        console.log(eight.value);
+        bottomText.textContent = secondNumArr.join("");
+        if (secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+            secondNumArr.shift();
+            bottomText.textContent = secondNumArr.join("");
+        } 
     }
 });
 
 nine.addEventListener('click', () => {
-    firstNumArr.push(nine.value);
-    console.log(nine.value);
-    bottomText.textContent = firstNumArr.join("");
-    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-        firstNumArr.shift();
+    if (operation == null) {
+        firstNumArr.push(nine.value);
+        console.log(nine.value);
         bottomText.textContent = firstNumArr.join("");
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(nine.value);
+        console.log(nine.value);
+        bottomText.textContent = secondNumArr.join("");
+        if (secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+            secondNumArr.shift();
+            bottomText.textContent = secondNumArr.join("");
+        } 
     }
 });
 
 zero.addEventListener('click', () => {
-    firstNumArr.push(zero.value);
-    console.log(zero.value);
-    if(firstNumArr[0] == 0 && firstNumArr[1] == 0) {
-        firstNumArr.pop();
-    } else {
-        bottomText.textContent = firstNumArr.join("");
+    if (operation == null) {
+        firstNumArr.push(zero.value);
+        console.log(zero.value);
+        if (firstNumArr[0] == 0 && firstNumArr[1] == 0) {
+            firstNumArr.pop();
+        } else {
+            bottomText.textContent = firstNumArr.join("");
+        }
+    } else if (operation != null) {
+        secondNumArr.push(zero.value);
+        console.log(zero.value);
+        if (secondNumArr[0] == 0 && secondNumArr[1] == 0) {
+            secondNumArr.pop();
+        } else {
+            bottomText.textContent = secondNumArr.join("");
+        }
     }
 });
 
 decimal.addEventListener('click', () => {
-    if(firstNumArr == []) {
-        firstNumArr.push(0);
-        firstNumArr.push('.');
-        decimal.disabled = true;
-    // } else if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-    //     firstNumArr.shift();        
-    } else {
-        firstNumArr.push('.');
-        bottomText.textContent = firstNumArr.join("");
-        decimal.disabled = true;
+    if (operation == null) {
+        if(firstNumArr == []) {
+            firstNumArr.push(0);
+            firstNumArr.push('.');
+            decimal.disabled = true;       
+        } else {
+            firstNumArr.push('.');
+            bottomText.textContent = firstNumArr.join("");
+            decimal.disabled = true;
+        }
+    } else if (operation != null) {
+        if(secondNumArr == []) {
+            secondNumArr.push(0);
+            secondNumArr.push('.');
+            decimal.disabled = true;
+        } else {
+            secondNumArr.push('.');
+            bottomText.textContent = secondNumArr.join("");
+            decimal.disabled = true;
+        }
     }
+    
 });
 
 add.addEventListener('click', () => {
     if(firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} +`;
         bottomText.textContent = 0;
+        operation = 'add';
+        decimal.disabled = false;
     } else {
         return;
     }
@@ -161,6 +270,8 @@ subtract.addEventListener('click', () => {
     if(firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} -`;
         bottomText.textContent = 0;
+        operation = 'subtract';
+        decimal.disabled = false;
     } else {
         return;
     }
@@ -170,6 +281,8 @@ multiply.addEventListener('click', () => {
     if(firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} x`;
         bottomText.textContent = 0;
+        operation = 'multiply';
+        decimal.disabled = false;
     } else {
         return;
     }
@@ -179,6 +292,8 @@ divide.addEventListener('click', () => {
     if(firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} ÷`;
         bottomText.textContent = 0;
+        operation = 'divide';
+        decimal.disabled = false;
     } else {
         return;
     }
