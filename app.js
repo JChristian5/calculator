@@ -258,67 +258,83 @@ decimal.addEventListener('click', () => {
 });
 
 add.addEventListener('click', () => {
-    if(firstNumArr != 0) {
+    if(answer != null) {
+        firstNumArr = [answer];
+        secondNumArr = [];
+        operation = '+';
+        topText.textContent = `${firstNumArr.join("")} +`;
+        bottomText.textContent = `0`;
+    } else if (firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} +`;
         bottomText.textContent = 0;
-        operation = 'add';
+        operation = '+';
         decimal.disabled = false;
-    } else {
-        return;
     }
 });
 
 subtract.addEventListener('click', () => {
-    if(firstNumArr != 0) {
+    if(answer != null) {
+        firstNumArr = [answer];
+        secondNumArr = [];
+        operation = '-';
+        topText.textContent = `${firstNumArr.join("")} -`;
+        bottomText.textContent = `0`;
+    } else if (firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} -`;
         bottomText.textContent = 0;
-        operation = 'subtract';
+        operation = '-';
         decimal.disabled = false;
-    } else {
-        return;
     }
 });
 
 multiply.addEventListener('click', () => {
-    if(firstNumArr != 0) {
+    if(answer != null) {
+        firstNumArr = [answer];
+        secondNumArr = [];
+        operation = 'x';
+        topText.textContent = `${firstNumArr.join("")} x`;
+        bottomText.textContent = `0`;
+    } else if (firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} x`;
         bottomText.textContent = 0;
-        operation = 'multiply';
+        operation = 'x';
         decimal.disabled = false;
-    } else {
-        return;
     }
 });
 
 divide.addEventListener('click', () => {
-    if(firstNumArr != 0) {
+    if(answer != null) {
+        firstNumArr = [answer];
+        secondNumArr = [];
+        operation = '÷';
+        topText.textContent = `${firstNumArr.join("")} ÷`;
+        bottomText.textContent = `0`;
+    } else if (firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} ÷`;
         bottomText.textContent = 0;
-        operation = 'divide';
+        operation = '÷';
         decimal.disabled = false;
-    } else {
-        return;
     }
 });
 
 equal.addEventListener('click', () => {
     if (operation == null || secondNumArr == []) {
         return;
-    } else if (operation == 'add') {
+    } else if (operation == '+') {
         topText.textContent = `${firstNumArr.join("")} + ${secondNumArr.join("")} =`;
         answer = parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""));
         bottomText.textContent = `${answer}`;
-    } else if (operation == 'subtract') {
+    } else if (operation == '-') {
         topText.textContent = `${firstNumArr.join("")} - ${secondNumArr.join("")} =`;
         answer = parseFloat(firstNumArr.join("")) - parseFloat(secondNumArr.join(""));
         bottomText.textContent = `${answer}`;
-    } else if (operation == 'multiply') {
+    } else if (operation == 'x') {
         topText.textContent = `${firstNumArr.join("")} x ${secondNumArr.join("")} =`;
         answer = parseFloat(firstNumArr.join("")) * parseFloat(secondNumArr.join(""));
         bottomText.textContent = `${answer}`;
-    } else if (operation == 'divide' && secondNumArr == 0) {
+    } else if (operation == '÷' && secondNumArr == 0) {
         bottomText.textContent = `Error, can not divide by 0!`;
-    } else if (operation == 'divide') {
+    } else if (operation == '÷') {
         topText.textContent = `${firstNumArr.join("")} ÷ ${secondNumArr.join("")} =`;
         answer = parseFloat(firstNumArr.join("")) / parseFloat(secondNumArr.join(""));
         bottomText.textContent = `${answer}`;
@@ -335,5 +351,26 @@ c.addEventListener('click', () => {
 });
 
 ce.addEventListener('click', () => {
-    // if(answer =)
-})
+    if (answer != null) {
+        answer = null;
+        topText.textContent = `${firstNumArr.join("")} ${operation}`;
+        bottomText.textContent = `${secondNumArr.join("")}`;
+    } else if (secondNumArr.length != 0) {
+        secondNumArr.pop();
+        topText.textContent = `${firstNumArr.join("")} ${operation}`;
+        bottomText.textContent = `${secondNumArr.join("")}`;
+        if (secondNumArr.length == 0) {
+            bottomText.textContent = `0`;
+        }
+    } else if (operation != null) {
+        operation = null;
+        topText.textContent = ``;
+        bottomText.textContent = `${firstNumArr.join("")}`;
+    } else if (firstNumArr.length != 0) {
+        firstNumArr.pop();
+        bottomText.textContent = `${firstNumArr.join("")}`;
+        if (firstNumArr.length == 0) {
+            bottomText.textContent = `0`;
+        }
+    }
+});
