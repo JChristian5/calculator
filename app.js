@@ -30,7 +30,7 @@ let secondNumArr = [];
 
 let operation = null;
 
-let answer = 0;
+let answer = null;
 
 one.addEventListener('click', () => {
     if (operation == null) {
@@ -329,7 +329,11 @@ c.addEventListener('click', () => {
     firstNumArr = [];
     secondNumArr = [];
     operation = null;
-    answer = 0;
+    answer = null;
     topText.textContent = ``;
     bottomText.textContent = `0`;
 });
+
+ce.addEventListener('click', () => {
+    // if(answer =)
+})
