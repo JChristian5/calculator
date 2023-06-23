@@ -2,7 +2,7 @@
 // CHANGE For zero, if first num is zero, second number cannot be zero
 // if/else for first/second array add?
 
-let ac = document.getElementById('ac');
+let ce = document.getElementById('ce');
 let c = document.getElementById('c');
 let one = document.getElementById('one');
 let two = document.getElementById('two');
