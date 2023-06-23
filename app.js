@@ -324,3 +324,12 @@ equal.addEventListener('click', () => {
         bottomText.textContent = `${answer}`;
     }
 });
+
+c.addEventListener('click', () => {
+    firstNumArr = [];
+    secondNumArr = [];
+    operation = null;
+    answer = 0;
+    topText.textContent = ``;
+    bottomText.textContent = `0`;
+});
