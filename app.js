@@ -348,6 +348,7 @@ add.addEventListener('click', () => {
         topText.textContent = `${firstNumArr.join("")} +`;
         bottomText.textContent = `0`;
         answer = null;
+        decimal.disabled = false;
     }
     // If user presses operation before equal sign 
       else if (firstNumArr != [] && secondNumArr != []) {
@@ -366,6 +367,7 @@ add.addEventListener('click', () => {
         bottomText.textContent = `0`;
         operation = '+';
         secondNumArr = [];
+        decimal.disabled = false;
     } else if (firstNumArr != []) {
         topText.textContent = `${firstNumArr.join("")} +`;
         bottomText.textContent = 0;
@@ -382,6 +384,7 @@ subtract.addEventListener('click', () => {
         topText.textContent = `${firstNumArr.join("")} -`;
         bottomText.textContent = `0`;
         answer = null;
+        decimal.disabled = false;
     } else if (firstNumArr != [] && secondNumArr != []) {
         if (operation == '+') {
             firstNumArr = [parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""))];
@@ -398,6 +401,7 @@ subtract.addEventListener('click', () => {
         bottomText.textContent = `0`;
         operation = '-';
         secondNumArr = [];
+        decimal.disabled = false;
     } else if (firstNumArr != []) {
         topText.textContent = `${firstNumArr.join("")} -`;
         bottomText.textContent = 0;
@@ -414,6 +418,7 @@ multiply.addEventListener('click', () => {
         topText.textContent = `${firstNumArr.join("")} x`;
         bottomText.textContent = `0`;
         answer = null;
+        decimal.disabled = false;
     } else if (firstNumArr != [] && secondNumArr != []) {
         if (operation == '+') {
             firstNumArr = [parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""))];
@@ -430,6 +435,7 @@ multiply.addEventListener('click', () => {
         bottomText.textContent = `0`;
         operation = 'x';
         secondNumArr = [];
+        decimal.disabled = false;
     } else if (firstNumArr != []) {
         topText.textContent = `${firstNumArr.join("")} x`;
         bottomText.textContent = 0;
@@ -446,6 +452,7 @@ divide.addEventListener('click', () => {
         topText.textContent = `${firstNumArr.join("")} ÷`;
         bottomText.textContent = `0`;
         answer = null;
+        decimal.disabled = false;
     } else if (firstNumArr != [] && secondNumArr != []) {
         if (operation == '+') {
             firstNumArr = [parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""))];
@@ -462,6 +469,7 @@ divide.addEventListener('click', () => {
         bottomText.textContent = `0`;
         operation = '÷';
         secondNumArr = [];
+        decimal.disabled = false;
     } else if (firstNumArr != 0) {
         topText.textContent = `${firstNumArr.join("")} ÷`;
         bottomText.textContent = 0;
@@ -501,6 +509,7 @@ c.addEventListener('click', () => {
     answer = null;
     topText.textContent = ``;
     bottomText.textContent = `0`;
+    decimal.disabled = false;
 });
 
 ce.addEventListener('click', () => {
