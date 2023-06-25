@@ -35,7 +35,15 @@ let operation = null;
 let answer = null;
 
 one.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(one.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(one.value);
         console.log(one.value);
         bottomText.textContent = firstNumArr.join("");
@@ -55,7 +63,15 @@ one.addEventListener('click', () => {
 });
 
 two.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(two.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(two.value);
         console.log(two.value);
         bottomText.textContent = firstNumArr.join("");
@@ -75,7 +91,15 @@ two.addEventListener('click', () => {
 });
 
 three.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(three.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(three.value);
         console.log(three.value);
         bottomText.textContent = firstNumArr.join("");
@@ -95,7 +119,15 @@ three.addEventListener('click', () => {
 });
 
 four.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(four.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(four.value);
         console.log(four.value);
         bottomText.textContent = firstNumArr.join("");
@@ -115,7 +147,15 @@ four.addEventListener('click', () => {
 });
 
 five.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(five.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(five.value);
         console.log(five.value);
         bottomText.textContent = firstNumArr.join("");
@@ -135,7 +175,15 @@ five.addEventListener('click', () => {
 });
 
 six.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(six.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(six.value);
         console.log(six.value);
         bottomText.textContent = firstNumArr.join("");
@@ -155,7 +203,15 @@ six.addEventListener('click', () => {
 });
 
 seven.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(seven.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(seven.value);
         console.log(seven.value);
         bottomText.textContent = firstNumArr.join("");
@@ -175,7 +231,15 @@ seven.addEventListener('click', () => {
 });
 
 eight.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(eight.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(eight.value);
         console.log(eight.value);
         bottomText.textContent = firstNumArr.join("");
@@ -195,7 +259,15 @@ eight.addEventListener('click', () => {
 });
 
 nine.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(nine.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(nine.value);
         console.log(nine.value);
         bottomText.textContent = firstNumArr.join("");
@@ -215,7 +287,15 @@ nine.addEventListener('click', () => {
 });
 
 zero.addEventListener('click', () => {
-    if (operation == null) {
+    if (answer != null) {
+        firstNumArr = [];
+        secondNumArr = [];
+        operation = null;
+        answer = null;
+        topText.textContent = ``;
+        firstNumArr.push(zero.value);
+        bottomText.textContent = firstNumArr.join("");
+    } else if (operation == null) {
         firstNumArr.push(zero.value);
         console.log(zero.value);
         if (firstNumArr[0] == 0 && firstNumArr[1] == 0) {
