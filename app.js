@@ -1,8 +1,8 @@
 // TOMORROW
-// If user presses second operator and secondNumArr is not empty,
-// evaluate the equation and show answer plus new operator
-// at the top.
-// Start CSS grid to align buttons.
+// If answer != null and user presses number, resets the firstNumArr,
+// secondNumArr, and operation. Same as using C button.
+// Issue with decimal button disabling and not re-enabling when going
+// to secondNumArr.
 
 let ce = document.getElementById('ce');
 let c = document.getElementById('c');
@@ -267,6 +267,7 @@ add.addEventListener('click', () => {
         operation = '+';
         topText.textContent = `${firstNumArr.join("")} +`;
         bottomText.textContent = `0`;
+        answer = null;
     }
     // If user presses operation before equal sign 
       else if (firstNumArr != [] && secondNumArr != []) {
@@ -300,6 +301,7 @@ subtract.addEventListener('click', () => {
         operation = '-';
         topText.textContent = `${firstNumArr.join("")} -`;
         bottomText.textContent = `0`;
+        answer = null;
     } else if (firstNumArr != [] && secondNumArr != []) {
         if (operation == '+') {
             firstNumArr = [parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""))];
@@ -331,6 +333,7 @@ multiply.addEventListener('click', () => {
         operation = 'x';
         topText.textContent = `${firstNumArr.join("")} x`;
         bottomText.textContent = `0`;
+        answer = null;
     } else if (firstNumArr != [] && secondNumArr != []) {
         if (operation == '+') {
             firstNumArr = [parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""))];
@@ -362,6 +365,7 @@ divide.addEventListener('click', () => {
         operation = '÷';
         topText.textContent = `${firstNumArr.join("")} ÷`;
         bottomText.textContent = `0`;
+        answer = null;
     } else if (firstNumArr != [] && secondNumArr != []) {
         if (operation == '+') {
             firstNumArr = [parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""))];
