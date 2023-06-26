@@ -1,9 +1,3 @@
-// TOMORROW
-// If answer != null and user presses number, resets the firstNumArr,
-// secondNumArr, and operation. Same as using C button.
-// Issue with decimal button disabling and not re-enabling when going
-// to secondNumArr.
-
 let ce = document.getElementById('ce');
 let c = document.getElementById('c');
 let one = document.getElementById('one');
@@ -524,6 +518,9 @@ ce.addEventListener('click', () => {
         if (secondNumArr.length == 0) {
             bottomText.textContent = `0`;
         }
+        if (secondNumArr.includes('.') == false) {
+            decimal.disabled = false;
+        }
     } else if (operation != null) {
         operation = null;
         topText.textContent = ``;
@@ -533,6 +530,9 @@ ce.addEventListener('click', () => {
         bottomText.textContent = `${firstNumArr.join("")}`;
         if (firstNumArr.length == 0) {
             bottomText.textContent = `0`;
+        }
+        if (firstNumArr.includes('.') == false) {
+            decimal.disabled = false;
         }
     }
 });
