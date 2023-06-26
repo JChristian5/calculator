@@ -4,7 +4,7 @@ header {
 }
 
 .displayBox {
-    height: 200px;
+    height: 100px;
     width: 500px;
     outline: 1px solid black;
     margin: auto;
@@ -31,7 +31,8 @@ header {
 }
 
 button {
-    height: 50px;
+    height: 100px;
+    border-radius: 0;
 }
 
 #c {
@@ -122,4 +123,21 @@ button {
 #divide {
     grid-column: 4;
     grid-row: 4;
+}
+
+.number {
+    background-color: #505050;
+    color: #FAF9F6;
+    font-size: 36px;
+}
+
+.erase {
+    background-color: #D4D4D2;
+    font-size: 36px;
+}
+
+.operating {
+    background-color: #FF9500;
+    color: #FAF9F6;
+    font-size: 36px;
 }
