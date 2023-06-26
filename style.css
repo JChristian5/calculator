@@ -144,3 +144,13 @@ button {
     color: #FAF9F6;
     font-size: 36px;
 }
+
+@media screen and (max-width: 650px) {
+    .displayBox {
+        width: 375px;
+    }
+    
+    .buttons {
+        width: 375px;
+    }
+}
