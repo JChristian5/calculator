@@ -172,13 +172,7 @@ decimal.addEventListener('click', () => {
 add.addEventListener('click', () => {
     // If user presses operation after equal
     if(answer != null) {
-        firstNumArr = [answer];
-        secondNumArr = [];
-        operation = '+';
-        topText.textContent = `${firstNumArr.join("")} +`;
-        bottomText.textContent = `0`;
-        answer = null;
-        decimal.disabled = false;
+        keepOperating('+');
     }
     // If user presses operation before equal sign 
       else if (firstNumArr != [] && secondNumArr != []) {
@@ -208,13 +202,7 @@ add.addEventListener('click', () => {
 
 subtract.addEventListener('click', () => {
     if(answer != null) {
-        firstNumArr = [answer];
-        secondNumArr = [];
-        operation = '-';
-        topText.textContent = `${firstNumArr.join("")} -`;
-        bottomText.textContent = `0`;
-        answer = null;
-        decimal.disabled = false;
+        keepOperating('-');
     } else if (firstNumArr != [] && secondNumArr != []) {
         if (operation == '+') {
             firstNumArr = [parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""))];
@@ -242,13 +230,7 @@ subtract.addEventListener('click', () => {
 
 multiply.addEventListener('click', () => {
     if(answer != null) {
-        firstNumArr = [answer];
-        secondNumArr = [];
-        operation = 'x';
-        topText.textContent = `${firstNumArr.join("")} x`;
-        bottomText.textContent = `0`;
-        answer = null;
-        decimal.disabled = false;
+        keepOperating('x');
     } else if (firstNumArr != [] && secondNumArr != []) {
         if (operation == '+') {
             firstNumArr = [parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""))];
@@ -276,13 +258,7 @@ multiply.addEventListener('click', () => {
 
 divide.addEventListener('click', () => {
     if(answer != null) {
-        firstNumArr = [answer];
-        secondNumArr = [];
-        operation = '÷';
-        topText.textContent = `${firstNumArr.join("")} ÷`;
-        bottomText.textContent = `0`;
-        answer = null;
-        decimal.disabled = false;
+        keepOperating('÷');
     } else if (firstNumArr != [] && secondNumArr != []) {
         if (operation == '+') {
             firstNumArr = [parseFloat(firstNumArr.join("")) + parseFloat(secondNumArr.join(""))];
@@ -399,5 +375,15 @@ function clearAndStart(num) {
     topText.textContent = ``;
     firstNumArr.push(num.value);
     bottomText.textContent = firstNumArr.join("");
+    decimal.disabled = false;
+}
+
+function keepOperating(newOpperation) {
+    firstNumArr = [answer];
+    secondNumArr = [];
+    operation = newOpperation;
+    topText.textContent = `${firstNumArr.join("")} +`;
+    bottomText.textContent = `0`;
+    answer = null;
     decimal.disabled = false;
 }
