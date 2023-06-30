@@ -30,13 +30,7 @@ let answer = null;
 
 one.addEventListener('click', () => {
     if (answer != null) {
-        firstNumArr = [];
-        secondNumArr = [];
-        operation = null;
-        answer = null;
-        topText.textContent = ``;
-        firstNumArr.push(one.value);
-        bottomText.textContent = firstNumArr.join("");
+        clearAndStart(one);
     } else if (operation == null) {
         pushArr(one);
     } else if (operation != null) {
@@ -46,13 +40,7 @@ one.addEventListener('click', () => {
 
 two.addEventListener('click', () => {
     if (answer != null) {
-        firstNumArr = [];
-        secondNumArr = [];
-        operation = null;
-        answer = null;
-        topText.textContent = ``;
-        firstNumArr.push(two.value);
-        bottomText.textContent = firstNumArr.join("");
+        clearAndStart(two);
     } else if (operation == null) {
         pushArr(two);
     } else if (operation != null) {
@@ -62,13 +50,7 @@ two.addEventListener('click', () => {
 
 three.addEventListener('click', () => {
     if (answer != null) {
-        firstNumArr = [];
-        secondNumArr = [];
-        operation = null;
-        answer = null;
-        topText.textContent = ``;
-        firstNumArr.push(three.value);
-        bottomText.textContent = firstNumArr.join("");
+        clearAndStart(three);
     } else if (operation == null) {
         pushArr(three);
     } else if (operation != null) {
@@ -78,13 +60,7 @@ three.addEventListener('click', () => {
 
 four.addEventListener('click', () => {
     if (answer != null) {
-        firstNumArr = [];
-        secondNumArr = [];
-        operation = null;
-        answer = null;
-        topText.textContent = ``;
-        firstNumArr.push(four.value);
-        bottomText.textContent = firstNumArr.join("");
+        clearAndStart(four);
     } else if (operation == null) {
         pushArr(four);
     } else if (operation != null) {
@@ -94,13 +70,7 @@ four.addEventListener('click', () => {
 
 five.addEventListener('click', () => {
     if (answer != null) {
-        firstNumArr = [];
-        secondNumArr = [];
-        operation = null;
-        answer = null;
-        topText.textContent = ``;
-        firstNumArr.push(five.value);
-        bottomText.textContent = firstNumArr.join("");
+        clearAndStart(five);
     } else if (operation == null) {
         pushArr(five);
     } else if (operation != null) {
@@ -110,13 +80,7 @@ five.addEventListener('click', () => {
 
 six.addEventListener('click', () => {
     if (answer != null) {
-        firstNumArr = [];
-        secondNumArr = [];
-        operation = null;
-        answer = null;
-        topText.textContent = ``;
-        firstNumArr.push(six.value);
-        bottomText.textContent = firstNumArr.join("");
+        clearAndStart(six);
     } else if (operation == null) {
         pushArr(six);
     } else if (operation != null) {
@@ -126,13 +90,7 @@ six.addEventListener('click', () => {
 
 seven.addEventListener('click', () => {
     if (answer != null) {
-        firstNumArr = [];
-        secondNumArr = [];
-        operation = null;
-        answer = null;
-        topText.textContent = ``;
-        firstNumArr.push(seven.value);
-        bottomText.textContent = firstNumArr.join("");
+        clearAndStart(seven);
     } else if (operation == null) {
         pushArr(seven);
     } else if (operation != null) {
@@ -142,13 +100,7 @@ seven.addEventListener('click', () => {
 
 eight.addEventListener('click', () => {
     if (answer != null) {
-        firstNumArr = [];
-        secondNumArr = [];
-        operation = null;
-        answer = null;
-        topText.textContent = ``;
-        firstNumArr.push(eight.value);
-        bottomText.textContent = firstNumArr.join("");
+        clearAndStart(eight);
     } else if (operation == null) {
         pushArr(eight);
     } else if (operation != null) {
@@ -158,13 +110,7 @@ eight.addEventListener('click', () => {
 
 nine.addEventListener('click', () => {
     if (answer != null) {
-        firstNumArr = [];
-        secondNumArr = [];
-        operation = null;
-        answer = null;
-        topText.textContent = ``;
-        firstNumArr.push(nine.value);
-        bottomText.textContent = firstNumArr.join("");
+        clearAndStart(nine);
     } else if (operation == null) {
         pushArr(nine);
     } else if (operation != null) {
@@ -429,18 +375,29 @@ ce.addEventListener('click', () => {
 
 function pushArr(num) {
     firstNumArr.push(num.value);
+    bottomText.textContent = firstNumArr.join("");
+    if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+        firstNumArr.shift();
         bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+    }
 }
 
 function pushSecondArr(num) {
     secondNumArr.push(num.value);
+    bottomText.textContent = secondNumArr.join("");
+    if(secondNumArr[0] == 0 && secondNumArr[1] != '.') {
+        secondNumArr.shift();
         bottomText.textContent = secondNumArr.join("");
-        if(secondNumArr[0] == 0 && secondNumArr[1] != '.') {
-            secondNumArr.shift();
-            bottomText.textContent = secondNumArr.join("");
-        }
+    }
+}
+
+function clearAndStart(num) {
+    firstNumArr = [];
+    secondNumArr = [];
+    operation = null;
+    answer = null;
+    topText.textContent = ``;
+    firstNumArr.push(num.value);
+    bottomText.textContent = firstNumArr.join("");
+    decimal.disabled = false;
 }
