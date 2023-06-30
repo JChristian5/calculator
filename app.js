@@ -38,12 +38,7 @@ one.addEventListener('click', () => {
         firstNumArr.push(one.value);
         bottomText.textContent = firstNumArr.join("");
     } else if (operation == null) {
-        firstNumArr.push(one.value);
-        bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+        pushArr(one);
     } else if (operation != null) {
         secondNumArr.push(one.value);
         bottomText.textContent = secondNumArr.join("");
@@ -64,12 +59,7 @@ two.addEventListener('click', () => {
         firstNumArr.push(two.value);
         bottomText.textContent = firstNumArr.join("");
     } else if (operation == null) {
-        firstNumArr.push(two.value);
-        bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+        pushArr(two);
     } else if (operation != null) {
         secondNumArr.push(two.value);
         bottomText.textContent = secondNumArr.join("");
@@ -90,12 +80,7 @@ three.addEventListener('click', () => {
         firstNumArr.push(three.value);
         bottomText.textContent = firstNumArr.join("");
     } else if (operation == null) {
-        firstNumArr.push(three.value);
-        bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+        pushArr(three);
     } else if (operation != null) {
         secondNumArr.push(three.value);
         bottomText.textContent = secondNumArr.join("");
@@ -116,12 +101,7 @@ four.addEventListener('click', () => {
         firstNumArr.push(four.value);
         bottomText.textContent = firstNumArr.join("");
     } else if (operation == null) {
-        firstNumArr.push(four.value);
-        bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+        pushArr(four);
     } else if (operation != null) {
         secondNumArr.push(four.value);
         bottomText.textContent = secondNumArr.join("");
@@ -142,12 +122,7 @@ five.addEventListener('click', () => {
         firstNumArr.push(five.value);
         bottomText.textContent = firstNumArr.join("");
     } else if (operation == null) {
-        firstNumArr.push(five.value);
-        bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+        pushArr(five);
     } else if (operation != null) {
         secondNumArr.push(five.value);
         bottomText.textContent = secondNumArr.join("");
@@ -168,12 +143,7 @@ six.addEventListener('click', () => {
         firstNumArr.push(six.value);
         bottomText.textContent = firstNumArr.join("");
     } else if (operation == null) {
-        firstNumArr.push(six.value);
-        bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+        pushArr(six);
     } else if (operation != null) {
         secondNumArr.push(six.value);
         bottomText.textContent = secondNumArr.join("");
@@ -194,12 +164,7 @@ seven.addEventListener('click', () => {
         firstNumArr.push(seven.value);
         bottomText.textContent = firstNumArr.join("");
     } else if (operation == null) {
-        firstNumArr.push(seven.value);
-        bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+        pushArr(seven);
     } else if (operation != null) {
         secondNumArr.push(seven.value);
         bottomText.textContent = secondNumArr.join("");
@@ -220,12 +185,7 @@ eight.addEventListener('click', () => {
         firstNumArr.push(eight.value);
         bottomText.textContent = firstNumArr.join("");
     } else if (operation == null) {
-        firstNumArr.push(eight.value);
-        bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+        pushArr(eight);
     } else if (operation != null) {
         secondNumArr.push(eight.value);
         bottomText.textContent = secondNumArr.join("");
@@ -246,12 +206,7 @@ nine.addEventListener('click', () => {
         firstNumArr.push(nine.value);
         bottomText.textContent = firstNumArr.join("");
     } else if (operation == null) {
-        firstNumArr.push(nine.value);
-        bottomText.textContent = firstNumArr.join("");
-        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
-            firstNumArr.shift();
-            bottomText.textContent = firstNumArr.join("");
-        }
+        pushArr(nine);
     } else if (operation != null) {
         secondNumArr.push(nine.value);
         bottomText.textContent = secondNumArr.join("");
@@ -516,3 +471,12 @@ ce.addEventListener('click', () => {
         }
     }
 });
+
+function pushArr(num) {
+    firstNumArr.push(num.value);
+        bottomText.textContent = firstNumArr.join("");
+        if(firstNumArr[0] == 0 && firstNumArr[1] != '.') {
+            firstNumArr.shift();
+            bottomText.textContent = firstNumArr.join("");
+        }
+}
